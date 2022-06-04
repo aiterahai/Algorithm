@@ -1,0 +1,1 @@
+for a, b in sorted([list(map(int, input().split())) for _ in range(int(input()))]): print(a, b)
