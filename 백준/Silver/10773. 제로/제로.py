@@ -1,8 +1,7 @@
+from sys import stdin
 arr = []
-for i in range(int(input())):
-    temp = int(input())
-    if(temp == 0):
-        arr.pop()
-    else:
-        arr.append(temp)
+for i in range(int(stdin.readline())):
+    temp = int(stdin.readline())
+    if(temp): arr.append(temp)
+    else: arr.pop()
 print(sum(arr))
