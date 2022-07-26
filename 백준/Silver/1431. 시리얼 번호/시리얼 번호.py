@@ -1,0 +1,1 @@
+for i in sorted([[i, sum([int(j) for j in i if j.isdigit()])] for i in [input() for _ in range(int(input()))]], key=lambda x:(len(x[0]), x[1], x[0])): print(i[0])
