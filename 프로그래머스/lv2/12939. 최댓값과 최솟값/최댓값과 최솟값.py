@@ -1,0 +1,1 @@
+def solution(s): return f"{min(list(map(int, s.split())))} {max(list(map(int, s.split())))}"
