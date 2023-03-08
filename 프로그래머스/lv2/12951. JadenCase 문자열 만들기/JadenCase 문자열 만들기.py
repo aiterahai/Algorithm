@@ -1,0 +1,1 @@
+def solution(s): return "".join([i.capitalize() for i in s.replace(" ", " _ ").split()]).replace("_", " ")
