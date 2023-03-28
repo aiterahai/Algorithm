@@ -1,7 +1,1 @@
-def solution(citations):
-    citations.sort(reverse=True)
-    M = 0
-    for i in citations:
-        if i > M:
-            M += 1
-    return M
+def solution(citations, M = 0): return len([(M := M + 1) for i in sorted(citations, reverse=True) if i > M])
