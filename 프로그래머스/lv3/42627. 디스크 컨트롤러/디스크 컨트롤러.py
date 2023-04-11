@@ -16,5 +16,3 @@ def solution(jobs):
             result, time = result + time - it + pt, time + pt
         else: time += 1
     return result // length
-
-print(solution([[0, 3], [1, 9], [2, 6]]))
