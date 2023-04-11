@@ -7,20 +7,14 @@ e-mail: terra2007@naver.com
 github: https://github.com/terra2007
 """
 import heapq
-
 def solution(jobs):
-    length = len(jobs)
-    jobs = sorted(jobs, reverse=True)
-    todo = []
-    time = 0
-    result = 0
+    length, jobs, todo, time, result = len(jobs), sorted(jobs, reverse=True), [], 0, 0
     while jobs or todo:
-        while jobs and time >= jobs[-1][0]:
-            x, y = jobs.pop()
-            heapq.heappush(todo, [y, x])
-        if not todo: time += 1
+        while jobs and time >= jobs[-1][0]: heapq.heappush(todo, [jobs[-1][1], jobs.pop()[0]])
         if todo:
             pt, it = heapq.heappop(todo)
-            result += time - it + pt
-            time += pt
+            result, time = result + time - it + pt, time + pt
+        else: time += 1
     return result // length
+
+print(solution([[0, 3], [1, 9], [2, 6]]))
